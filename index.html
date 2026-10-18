@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weatherly</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon"><img src="weather_logo.jpg"></span>
+        <div>
+          <h1>Weatherly</h1>
+          <p>Weather at a glance</p>
+        </div>
+      </div>
+
+      <button class="location-btn"  id="useLocation">
+        ⌖ Use my location
+      </button>
+    </header>
+
+
+    <!-- SEARCH -->
+    <section class="search-section">
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="text" placeholder="Search for a city..." id="cityName">
+        <button id="searchBtn">Search</button>
+      </div>
+    </section>
+    
+<div class="spinner hidden"id="loading-spinner">
+</div>
+    <!-- CURRENT WEATHER -->
+    <section class="current-weather">
+<div class="weather-main">
+
+        <div class="weather-location">
+          <span class="placeholder"><img src="placeholder.png"></span>
+          <div>
+            <h2 id="city">Search your city</h2>
+          </div>
+        </div>
+
+        <div class="temperature">
+        <img id="mainIcon">
+          <div>
+            <strong id="temp">28°</strong>
+            <p id="typeWeather">Sunny</p>
+          </div>
+        </div>
+
+        <p class="feels">
+          Feels like <span id="feels-like">30</span>°
+        </p>
+      </div>
+      <!-- WEATHER STATS -->
+      <div class="weather-stats">
+   <div class="stat-card">
+          <span>💧</span>
+          <div>
+            <small>Humidity</small>
+            <strong id="weatherHumidity">68%</strong>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span>💨</span>
+          <div>
+            <small>Wind</small>
+            <strong><span id="weatherWind">12</span> km/h</strong>
+          </div>
+        </div>
+ <div class="stat-card">
+          <span>👁</span>
+          <div>
+            <small>Visibility</small>
+            <strong>10 km</strong>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span>🌡</span>
+          <div>
+            <small>Pressure</small>
+            <strong><span id="pressure">1012</span> hPa</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- HOURLY -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Hourly forecast</h2>
+        <span>Today</span>
+      </div>
+
+<div class="hourly" id="hourly-forcast">
+       <div class="hour active">
+          <p>Now</p>
+          <span id="icon-hourly-now">☀️</span>
+          <strong><span id="Now-hourlyTemp">28</span></strong>
+        </div>
+  <div class="hour">
+          <p>10 AM</p>
+          <span>☀️</span>
+          <strong>29°</strong>
+        </div>
+<div class="hour">
+          <p>12 PM</p>
+          <span>🌤️</span>
+          <strong>31°</strong>
+        </div>
+
+        <div class="hour">
+          <p>2 PM</p>
+          <span>⛅</span>
+          <strong>32°</strong>
+        </div>
+
+        <div class="hour">
+          <p>4 PM</p>
+          <span>🌤️</span>
+          <strong>30°</strong>
+        </div>
+
+        <div class="hour">
+          <p>6 PM</p>
+          <span>🌙</span>
+          <strong>27°</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 7 DAY FORECAST -->
+    <section class="section">
+
+      <div class="section-title">
+        <h2>5-day forecast</h2>
+        <span>Next 5 days</span>
+      </div>
+      <div class="forecast" id="forecast-show">
+        <h4 class="search-text">  ⚠️ search your city first </h4>
+        
+<div class="spinner"id="loading-spinner">
+</div>
+          </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+      <p>Weather data • Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+  </main>
+  <!-- POPUP OVERLAY -->
+<div class="popup-overlay" id="weatherPopup">
+  
+  <div class="weather-popup">
+    
+    <button class="popup-close" id="closePopup">×</button>
+    
+    <div class="popup-icon">
+      ⚠️
+    </div>
+    
+    <h2>System alert</h2>
+    <p id="display-msg"></p>
+    <button class="popup-btn" id="popupOkay">
+      Try Again
+    </button>
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
